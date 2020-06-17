@@ -1,11 +1,9 @@
 //Criar um programa que calcula a média
-//das notas entre os alunos e envia
+//das turmas dos alunos e envia
 // msg do cálculo da média.
 
-//Trabalhando com ARRAYS (vetores (coleção de objetos)), para acesso utilizar nome da array[posição(lembrando que inicia em 0)]
-//para exemplo, verificar const media abaixo: alunos[0].nota, o programa vai dentro da array alunos, procura pela posição 0,
-//que é o primeiro objeto, e procura o atributo nota nesse objeto, assim fazendo o return do valor.
-const alunos = [
+
+const alunosDaTurmaA = [
     {
         nome: "Patrick",
         nota: 9.8
@@ -20,19 +18,43 @@ const alunos = [
     }
 ]
 
+const alunosDaTurmaB = [
+    {
+        nome: "Fernando",
+        nota: 5
+    },
+    {
+        nome: "Joana",
+        nota: 4
+    },
+    {
+        nome: "Joao",
+        nota: 2
+    }
+]
 
-console.log(alunos)
-const media = (alunos[0].nota + alunos[1].nota + alunos[2].nota) / 3
+//utilizando funções para o calculo das médias
+function calculaMedia(alunos) {
+    return (alunos[0].nota + alunos[1].nota + alunos[2].nota) / 3
 
-
-//Se a média for maior que 5 parabenizar a turma
-
-if (media > 5){
-    console.log(`A média foi de ${media}. Parabéns`)
-} else {
-    console.log('A média foi menor que 5')
 }
 
+const media1 = calculaMedia(alunosDaTurmaA)
+const media2 = calculaMedia(alunosDaTurmaB)
+
+
+function enviaMensagem(media, turma) {
+    //Se a média for maior que 5 parabenizar a turma
+
+    if (media > 5){
+        console.log(`A média da turma ${turma} foi de ${media}. Parabéns`)
+    } else {
+        console.log(`A média da turma ${turma} é menor que 5`)
+    }
+}
+
+enviaMensagem(media1, "turmaA")
+enviaMensagem(media2, "turmaB")
 
 
 
