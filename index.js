@@ -25,7 +25,7 @@ console.log(aluno01)
 
 const media = (aluno01.nota + aluno02.nota + aluno03.nota) / 3
 
-const media = (notaAluno01 + notaAluno02 + notaAluno03) / 3
+
 //Se a média for maior que 5 parabenizar a turma
 
 if (media > 5){
