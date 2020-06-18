@@ -74,7 +74,7 @@ function sendFlunkedMessage(student) {
     }
 }
 
-function studentsReprovados(students) {
+function studentsFlunked(students) {
     for (let student of students) {
         markAsFlunked(student)
         sendFlunkedMessage(student)
